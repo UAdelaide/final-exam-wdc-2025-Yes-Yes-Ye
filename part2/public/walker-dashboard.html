@@ -82,7 +82,6 @@
               headers: { 'Content-Type': 'application/json' },
               // Changed the user to user.value to use the value within ref(), not the hardcoded value.
               body: JSON.stringify({ walker_id: user.value })
-              console.log()
             });
             const result = await res.json();
 
