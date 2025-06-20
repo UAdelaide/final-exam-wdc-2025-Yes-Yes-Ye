@@ -46,7 +46,7 @@
           // On button click, send an AJAX POST request to /api/users/login containing a JSON file with the username and password.
           let xhttp = new XMLHttpRequest();
           xhttp.withCredentials = true;
-          xhttp.open('GET', '/api/login', true);
+          xhttp.open('POST', '/api/login', true);
           xhttp.setRequestHeader("Content-type", "application/json");
           xhttp.send(JSON.stringify({username: this.username, password: this.password}));
 
