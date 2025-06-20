@@ -19,10 +19,11 @@ app.use('/api/users', userRoutes);
 app.use(session({
     // Basic security measures
     secret: Math.random().toString(36),
-    resave: true,
-    saveUninitialized: true,
+    resave: false,
+    saveUninitialized: false,
     // Make it so that the session cookie lasts for an hour
     cookie: {
+        seure: 'auto',
         maxAge: 60*60*10000
     }
 }));
