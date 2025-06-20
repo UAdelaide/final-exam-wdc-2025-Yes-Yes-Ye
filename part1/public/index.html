@@ -17,7 +17,9 @@
         <button type="button" @click="getWalkRequests">Get.WR</button>
         <button type="button" @click="getWalkers">Get.W</button>
 
-        <ul></ul>
+        <ul>
+            <li v-for="dogs in getDogs"
+        </ul>
     </div>
     <script>
         const { dogApp } = Vue;
