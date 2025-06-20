@@ -132,8 +132,8 @@
             message.value = '';
           }
         }
-
-        onMounted(() => {
+        // Adding async to the onMounted element, and adding a new fe
+        onMounted( async () => {
           loadWalks();
         });
 
