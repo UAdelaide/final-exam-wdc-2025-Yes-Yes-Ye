@@ -50,7 +50,8 @@ router.get('/api/walkers/summary', function(req,res,next){
       FROM WalkRatings wra
       JOIN Users u WHERE wra.walker_id = u.user_id
       JOIN WalkRequests wrq WHERE wra.request_id = wrq.request_id
-      WHERE 
+      WHERE wrq.status = 'completed'
+      
       `
     );
   } catch(error){}
