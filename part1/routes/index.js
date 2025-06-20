@@ -52,6 +52,7 @@ router.get('/api/walkers/summary', function(req,res,next){
       FROM Users u
       LEFT JOIN WalkRequests wrq ON u.user_id = wrq.request_id AND wrq.status = 'completed'
       LEFT JOIN WalkRatings wra ON wrq.request_id = wra.request_id
+      WHERE u.role = 
       GROUP BY u.user_id, u.username
       `, function(error, rows) {
         res.json(rows);
