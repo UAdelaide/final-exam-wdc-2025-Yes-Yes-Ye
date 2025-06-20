@@ -44,7 +44,11 @@ router.get('/api/walkrequests/open', function(req,res,next){
 });
 
 router.get('/api/walkers/summary', function(req,res,next){
-  try {} catch(error){}
+  try {
+    db.query(`
+      `
+    );
+  } catch(error){}
 });
 
 module.exports = router;
