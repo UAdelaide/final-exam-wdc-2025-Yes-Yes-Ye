@@ -32,7 +32,7 @@
               <option disabled value="">-- Choose a dog --</option>
               <option v-for="dog in dog_name">{{ dog }}</option>
              </select>
-             
+
           </div>
           <div class="mb-3">
             <label class="form-label">Requested Date & Time</label>
@@ -86,6 +86,7 @@
           requested_time: '',
           duration_minutes: '',
           location: ''
+          // added a new entry
         });
 
         const walks = ref([]);
