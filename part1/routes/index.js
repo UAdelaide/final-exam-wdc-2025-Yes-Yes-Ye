@@ -47,7 +47,7 @@ router.get('/api/walkers/summary', function(req,res,next){
   try {
     db.query(`
       SELECT u.username AS walker_username, COUNT(wra.rating_id) AS total_ratings, AVG(wra.rating) AS average_rating, COUNT(wrq.request_id) AS completed_walks
-      FROM WalkRatings wra
+      FROM Users
       JOIN Users u ON wra.walker_id = u.user_id
       JOIN WalkRequests wrq ON wra.request_id = wrq.request_id
       WHERE wrq.status = 'completed'
