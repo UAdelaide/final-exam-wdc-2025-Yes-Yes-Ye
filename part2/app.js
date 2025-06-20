@@ -18,7 +18,7 @@ app.use('/api/users', userRoutes);
 // Add session middleware
 app.use(session({
     // Basic security measures
-    secret: Math.random
+    secret: Math.random().toString(36),
     resave: true,
     saveUninitialized: true,
     // Make it so that the session cookie lasts for an hour
