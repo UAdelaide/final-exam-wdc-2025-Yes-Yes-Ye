@@ -48,7 +48,7 @@
           xhttp.withCredentials = true;
           xhttp.open('POST', '/api/login', true);
           xhttp.setRequestHeader("Content-type", "application/json");
-          xhttp.send(JSON.stringify({this.}));
+          xhttp.send(JSON.stringify({username: this.username, }));
         }
       }
     }).mount('#app');
