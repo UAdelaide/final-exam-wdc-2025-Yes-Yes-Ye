@@ -11,7 +11,8 @@ router.get('/api/dogs', function(req,res,next){
   try {
     db.query(`
       SELECT name AS dog_name, size
-      FROM Dogs d`, function(error, rows) {
+      FROM Dogs d
+      JOIN Users `, function(error, rows) {
       res.json(rows);
     });
   } catch(error){
