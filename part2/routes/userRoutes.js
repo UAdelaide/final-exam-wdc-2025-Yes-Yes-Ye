@@ -70,6 +70,7 @@ router.post('/logout', function(req,res){
   req.session.destroy(function(err){
     if (err){
       console.error("Error destroying session: ", err);
+      return res.status(500).send("There was an error ");
     }
   });
   console.log("Session destroyed properly!");
