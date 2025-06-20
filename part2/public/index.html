@@ -43,7 +43,7 @@
       // Created a function for logging in
       methods: {
         LogIn: function() {
-          // On button click, send an AJAX GET request to /api/login containing a JSON file with the username and password.
+          // On button click, send an AJAX POST request to /login containing a JSON file with the username and password.
           let xhttp = new XMLHttpRequest();
           xhttp.withCredentials = true;
           xhttp.open('GET', '/api/login', true);
