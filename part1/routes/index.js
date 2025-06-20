@@ -27,7 +27,7 @@ router.get('/api/dogs', function(req,res,next){
 router.get('/api/walkrequests/open', function(req,res,next){
   try{
     db.query(`
-      SELECT 
+      SELECT wr.request_id, d.name AS 
       `
     );
   } catch(error){}
