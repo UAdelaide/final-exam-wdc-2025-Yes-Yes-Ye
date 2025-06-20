@@ -92,7 +92,8 @@
       methods: {
         LogOut() {
           // On button click, send a request to /api/users/logout, and send the user back to the login page.
-          let xhttp
+          let xhttp = new XMLHttpRequest();
+          xhttp.withCredentials = true;
         }
       }
     }).mount('#app');
