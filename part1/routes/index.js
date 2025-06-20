@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/api/dogs', function(req,res,next){
   try {
+    // SQL Query with specified element names
     db.query(`
       SELECT d.name AS dog_name, d.size, u.username AS owner_username
       FROM Dogs d
