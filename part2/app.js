@@ -17,7 +17,7 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 // Add session middleware
 app.use(session({
-    secret: Math.random().toString
+    secret: Math.random().toString(36).substring(2)
 }));
 
 // Export the app instead of listening here
