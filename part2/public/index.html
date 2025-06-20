@@ -44,6 +44,7 @@
       methods: {
         LogIn: function() {
           // On button click, send an AJAX POST request to /api/users/login containing a JSON file with the username and password.
+          console.log("function activated!");
           let xhttp = new XMLHttpRequest();
           xhttp.withCredentials = true;
           xhttp.open('POST', '/api/login', true);
