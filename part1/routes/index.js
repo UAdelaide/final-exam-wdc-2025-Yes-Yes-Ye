@@ -13,7 +13,7 @@ router.get('/api/dogs', function(req,res,next){
       res.json(rows);
     });
   } catch(error){
-    
+    res.status
   }
 });
 
