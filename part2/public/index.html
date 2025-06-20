@@ -59,7 +59,7 @@
               const roleResponse = JSON.parse(this.responseText);
               console.log(roleResponse);
               console.log(roleResponse.role);
-              if (role.role == "owner") {
+              if (roleResponse.role == "owner") {
                 window.location.href = '/owner-dashboard.html';
               }
               else {
