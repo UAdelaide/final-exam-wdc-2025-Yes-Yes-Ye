@@ -46,6 +46,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
+        // Changed from hardcoded number to ref(0); to dynamically change it.
         const user = ref(0);
 
         async function loadWalkRequests() {
