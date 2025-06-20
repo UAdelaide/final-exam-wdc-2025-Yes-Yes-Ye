@@ -69,7 +69,7 @@ router.post('/logout', function(req,res){
   console.log("Logout function activated!");
   req.session.destroy(function(err){
     if (err){
-      console.error
+      console.error("Error destroying session: ", );
     }
   });
   console.log("Session destroyed properly!");
