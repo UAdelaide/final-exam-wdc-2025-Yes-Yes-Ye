@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
-// Add session middleware
+// Added session middleware
 app.use(session({
     // Basic security measures
     secret: Math.random().toString(36),
