@@ -33,7 +33,7 @@ router.get('/me', (req, res) => {
     return res.status(401).json({ error: 'Not logged in' });
   }
   // Currently, my session data stores multiple values under the key user.
-  // To properly send the user id, I added .
+  // To properly send the user id, I added .user_id at the end of res.json();.
   res.json(req.session.user);
 });
 
