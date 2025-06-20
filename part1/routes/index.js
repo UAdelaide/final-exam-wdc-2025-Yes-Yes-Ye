@@ -25,6 +25,7 @@ router.get('/api/dogs', function(req,res,next){
 });
 
 router.get('/api/walkrequests/open', function(req,res,next){
+  // The try and catch block for handling potential errors as required
   try{
     db.query(`
       SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location, u.username AS owner_username
@@ -35,7 +36,8 @@ router.get('/api/walkrequests/open', function(req,res,next){
         res.json(rows);
       });
   } catch(error){
-    
+    // Sending a status error 404 and an errormessage
+    res.status(404).send('Database does not exist or cannot be recognised!');
   }
 });
 
