@@ -49,7 +49,7 @@ router.get('/api/walkers/summary', function(req,res,next){
       SELECT u.username AS walker_username, COUNT(wra.rating_id) AS total_ratings, AVG(wra.rating) AS average_rating, COUNT(wrq.request_id) AS completed_walks
       FROM Users
       LEFT JOIN WalkRequests wrq ON u.user_id = wrq.walk_id AND wrq.status = 'completed'
-      LEFT JOIN WalkRatings wrq ON wra.request_id = wrq.request_id
+      LEFT JOIN WalkRatings wra ON wrq.request_id = wra.request_id
       GROUP BY u.username
       `
     );
