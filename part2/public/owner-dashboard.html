@@ -11,7 +11,7 @@
   <div id="app" class="container py-4">
     <!-- Added the button for logout -->
     <button type="button" @click="LogOut" style="float: right">Logout</button>
-    
+
     <h1 class="mb-4 text-primary">Owner Dashboard</h1>
 
     <!-- Walk request form -->
@@ -129,6 +129,22 @@
           error,
           submitWalkRequest
         };
+      },
+      // Adding the function for logout
+      methods: {
+        LogOut() {
+          // On button click, send a request to /api/users/logout, and send the user back to the login page.
+          let xhttp = new XMLHttpRequest();
+          xhttp.withCredentials = true;
+          xhttp.open('POST', '/api/users/logout', true);
+          xhttp.send();
+
+          xhttp.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200) {
+              window.location.href = '/';
+            }
+          }
+        }
       }
     }).mount('#app');
   </script>
