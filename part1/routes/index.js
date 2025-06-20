@@ -31,9 +31,12 @@ router.get('/api/walkrequests/open', function(req,res,next){
       FROM WalkRequests wr
       JOIN Dogs d ON wr.dog_id = d.dog_id
       JOIN Users u ON d.owner_id = u.user_id
-      `, function(error, rows)
-    );
-  } catch(error){}
+      `, function(error, rows) {
+        res.json(rows);
+      });
+  } catch(error){
+    
+  }
 });
 
 router.get('/api/walkers/summary', function(req,res,next){
