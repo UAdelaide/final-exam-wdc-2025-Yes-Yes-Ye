@@ -55,8 +55,9 @@
           xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
               if (this.responseText.role == "owner") {
-                window.location.href = ''
+                window.location.href = '/owner-dashboard.html'
               }
+              else {}
             }
           }
         }
