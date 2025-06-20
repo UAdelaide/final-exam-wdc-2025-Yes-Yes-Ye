@@ -50,7 +50,10 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    //A
+    // Storing the login within the session
+    req.session.user = {
+      
+    };
 
     // The original code responds with a nested json for user: rows[0].
     // Changed it to role: rows[0].role. Since the only information needed to log in is role.
