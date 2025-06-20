@@ -19,7 +19,7 @@ app.use('/api/users', userRoutes);
 app.use(session({
     // Generate session id
     secret: Math.random().toString(36).substring(2),
-    
+    cookie: {maxAge: }
 }));
 
 // Export the app instead of listening here
