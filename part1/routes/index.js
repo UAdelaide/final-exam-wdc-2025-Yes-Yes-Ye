@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 router.get('/api/dogs', function(req,res,next){
   try {
     db.query(`
-      SELECT d.name AS dog_name, d.size, u.username AS 
+      SELECT d.name AS dog_name, d.size, u.username AS owner_username
       FROM Dogs d
       JOIN Users u ON d.owner_id = u.user_id
       `, function(error, rows) {
