@@ -66,7 +66,8 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/logout', function(req,res){
-  console.log(log);
+  console.log("Logout function activated!");
+  
 });
 
 module.exports = router;
