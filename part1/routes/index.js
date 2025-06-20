@@ -12,7 +12,8 @@ router.get('/api/dogs', function(req,res,next){
     db.query(`
       SELECT name AS d.dog_name, d.size, u.username
       FROM Dogs d
-      JOIN Users u ON d.owner_id = u.user_id`, function(error, rows) {
+      JOIN Users u ON d.owner_id = u.user_id
+      `, function(error, rows) {
       res.json(rows);
     });
   } catch(error){
