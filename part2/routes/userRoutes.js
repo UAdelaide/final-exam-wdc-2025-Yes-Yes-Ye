@@ -49,8 +49,8 @@ router.post('/login', async (req, res) => {
     if (rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
-    // The original code responds with a nested json for user: rows[0]. Changed it to just rows[]
-    res.json({ message: 'Login successful', user: rows[0] });
+    // The original code responds with a nested json for user: rows[0]. Changed it to just rows.
+    res.json({ message: 'Login successful', rows });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
