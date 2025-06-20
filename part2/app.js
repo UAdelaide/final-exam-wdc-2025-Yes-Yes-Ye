@@ -21,7 +21,7 @@ app.use(session({
     secret: Math.random().toString(36).substring(2),
     // Make it so that the session cookie lasts for an hour
     cookie: {
-        maxAge: 60*60*10000, http
+        maxAge: 60*60*10000
     }
 }));
 
