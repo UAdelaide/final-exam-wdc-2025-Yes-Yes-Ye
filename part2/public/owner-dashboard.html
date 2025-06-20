@@ -138,7 +138,7 @@
           loadWalks();
 
           const dogsRes = await fetch('/api/users/dognames');
-          
+          this.dog_name = await dogRes.json();
         });
 
         return {
