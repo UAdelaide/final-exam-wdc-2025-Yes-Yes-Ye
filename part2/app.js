@@ -18,8 +18,9 @@ app.use('/api/users', userRoutes);
 // Add session middleware
 app.use(session({
     // Basic security measures
+    secret = 
     resave: true,
-    saveUninitialized
+    saveUninitialized: true,
     // Make it so that the session cookie lasts for an hour
     cookie: {
         maxAge: 60*60*10000
