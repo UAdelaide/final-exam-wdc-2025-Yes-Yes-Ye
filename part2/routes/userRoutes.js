@@ -67,7 +67,7 @@ router.post('/login', async (req, res) => {
 
 router.post('/logout', function(req,res){
   console.log("Logout function activated!");
-  req.session.destroy();
+  req.session.destroy(function(error));
   console.log("Session destroyed properly!");
   return res.status(200).json({ loggedOut: true, message: "Successfully logged out!" });
 });
