@@ -30,7 +30,7 @@
             <!-- Creating a new dropdown box -->
              <select v-model="form.dog_name">
               <option disabled value="">-- Choose a dog --</option>
-              <option v-for="dog in dog_name">{{ dog }}</option>
+              <option v-for="dog in form.dog_name">{{ dog }}</option>
              </select>
 
           </div>
@@ -87,6 +87,7 @@
           duration_minutes: '',
           location: ''
           // added a new entry
+          dog_name: ''
         });
 
         const walks = ref([]);
