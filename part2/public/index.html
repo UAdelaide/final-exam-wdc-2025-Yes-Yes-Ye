@@ -51,7 +51,8 @@
           xhttp.send(JSON.stringify({username: this.username, password: this.password}));
 
           // Once the response comes, if the response text is role: owner, go to the owner-dashboard.
-          // Else, 
+          // Else, the role will be walker, therefore go to the owner-dashboard.
+          xhttp.onreadystatechange
         }
       }
     }).mount('#app');
