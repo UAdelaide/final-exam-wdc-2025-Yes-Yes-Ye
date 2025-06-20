@@ -44,8 +44,9 @@ router.get('/api/walkrequests/open', function(req,res,next){
 });
 
 router.get('/api/walkers/summary', function(req,res,next){
-  
+  // The try and catch block for handling potential errors as required
   try {
+    // SQL Query with specified element names
     db.query(`
       SELECT u.username AS walker_username, COUNT(wra.rating_id) AS total_ratings, AVG(wra.rating) AS average_rating, COUNT(wrq.request_id) AS completed_walks
       FROM Users u
