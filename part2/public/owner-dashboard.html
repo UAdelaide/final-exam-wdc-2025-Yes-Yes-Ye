@@ -80,6 +80,11 @@
     const { createApp, ref, onMounted } = Vue;
 
     createApp({
+      data() {
+        return {
+          dog_name: []
+        };
+      },
       setup() {
         const form = ref({
           dog_id: '',
@@ -137,11 +142,6 @@
           message,
           error,
           submitWalkRequest
-        };
-      },
-      data() {
-        return {
-          dog_name: []
         };
       },
       // Adding the function for logout
