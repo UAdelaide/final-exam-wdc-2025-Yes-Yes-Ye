@@ -137,7 +137,8 @@
         onMounted( async () => {
           loadWalks();
 
-          const dogsRes = await
+          const dogsRes = await fetch('/api/users/dognames');
+          
         });
 
         return {
