@@ -63,8 +63,9 @@
         // and applyToWalk() to write this
         async function getCurrentUser() {
           try {
-            const res = await fetch ('/api/users/me')
-            
+            const res = await fetch ('/api/users/me');
+            if (!res.ok) throw new Error('Failed to load walk requests');
+
           } catch (err) {}
         }
 
