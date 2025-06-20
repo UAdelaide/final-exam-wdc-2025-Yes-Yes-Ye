@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/api/dogs', function(req,res,next){
   try {
-    db.query('SELECT dog_name, size, ')
+    db.query('SELECT name, size, ')
   } catch(error){}
 });
 
