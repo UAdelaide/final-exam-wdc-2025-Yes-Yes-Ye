@@ -89,7 +89,7 @@ router.get('/dognames', async (req, res) => {
     SELECT d.name AS dog_name
     FROM Users u
     JOIN Dogs d ON u.user_id = d.owner_id
-    
+    WHERE u.user_id = ?
     `
   );
 });
