@@ -134,7 +134,7 @@
 
           const dogsRes = await fetch('/api/users/dognames');
           dog_name = await dogRes.json();
-          console.log("Response for /api/users/dognames recieved:");
+          console.log("Response for /api/users/dognames recieved: ", dog_name);
         });
 
         return {
