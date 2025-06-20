@@ -86,7 +86,8 @@ router.post('/logout', function(req,res){
 // The other example routes above for db queries.
 router.get('/dognames', async (req, res) => {
   const [rows] = await db.query(`
-    SELECT d.name FROM 
+    SELECT d.name
+    FROM
     `
   );
 });
