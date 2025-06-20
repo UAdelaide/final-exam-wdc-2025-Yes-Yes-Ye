@@ -88,7 +88,7 @@
           location: '',
         });
         // Adding a new array for dog_name
-        const dog_name = ref([])
+        const dog_name = ref([]);
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
@@ -133,7 +133,7 @@
           loadWalks();
 
           const dogsRes = await fetch('/api/users/dognames');
-          form.dog_name = await dogRes.json();
+          dog_name = await dogRes.json();
         });
 
         return {
