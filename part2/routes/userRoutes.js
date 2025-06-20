@@ -85,7 +85,7 @@ router.post('/logout', function(req,res){
 // Slightly different formatting from what I've been writing so far since I'm referencing
 // The other example routes above for db queries.
 router.get('/dognames', async (req, res) => {
-  console.log()
+  console.log('Current User Info: ', req.session);
   const [rows] = await db.query(`
     SELECT d.name AS dog_name
     FROM Users u
