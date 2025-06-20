@@ -19,6 +19,7 @@ router.get('/api/dogs', function(req,res,next){
       res.json(rows);
     });
   } catch(error){
+    // Sending a status error 404 and an errormessage
     res.status(404).send('Database does not exist or cannot be recognised!');
   }
 });
