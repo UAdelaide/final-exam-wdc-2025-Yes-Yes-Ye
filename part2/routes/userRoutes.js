@@ -65,7 +65,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Created a new route for /api/users/logout. 
+// Created a new route for /api/users/logout. Destroys the session and sends a json
 router.post('/logout', function(req,res){
   console.log("Logout function activated!");
   req.session.destroy(function(err){
