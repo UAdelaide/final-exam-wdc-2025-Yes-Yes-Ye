@@ -52,7 +52,7 @@ router.post('/login', async (req, res) => {
 
     // Storing the login within the session
     req.session.user = {
-      
+      user_id = rows[0].user
     };
 
     // The original code responds with a nested json for user: rows[0].
