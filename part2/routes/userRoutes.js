@@ -36,6 +36,7 @@ router.get('/me', (req, res) => {
 });
 
 // POST login (dummy version)
+// Changed email listings to username
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
