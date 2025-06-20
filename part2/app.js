@@ -17,8 +17,6 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 // Add session middleware
 app.use(session({
-    // Generate session id
-    secret: Math.random().toString(36).substring(2),
     // Make it so that the session cookie lasts for an hour
     cookie: {
         maxAge: 60*60*10000
