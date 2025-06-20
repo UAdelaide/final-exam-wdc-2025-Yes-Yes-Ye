@@ -54,7 +54,7 @@
           // Else, the role will be walker, therefore go to the owner-dashboard.
           xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-              
+              if (this.responseText.status)
             }
           }
         }
