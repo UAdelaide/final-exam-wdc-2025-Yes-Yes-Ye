@@ -42,7 +42,7 @@ router.post('/:id/apply', async (req, res) => {
 
   // Added console.log for debugging purposes.
   // Was getting a sql error: Column count doesn't match value count at row 1
-  console.log();
+  console.log(walker_id);
 
   try {
     await db.query(`
