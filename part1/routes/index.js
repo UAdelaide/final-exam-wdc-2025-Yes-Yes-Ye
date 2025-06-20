@@ -46,7 +46,7 @@ router.get('/api/walkrequests/open', function(req,res,next){
 router.get('/api/walkers/summary', function(req,res,next){
   try {
     db.query(`
-      SELECT 
+      SELECT u.username AS walker_username, 
       `
     );
   } catch(error){}
