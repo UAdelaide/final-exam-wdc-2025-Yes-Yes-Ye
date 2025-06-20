@@ -80,7 +80,6 @@
     const { createApp, ref, onMounted } = Vue;
 
     createApp({
-      // Adding array dog_name in form
       setup() {
         const form = ref({
           dog_id: '',
@@ -88,7 +87,8 @@
           duration_minutes: '',
           location: '',
         });
-        
+        // Adding a new array for dog_name
+        const dog_name = ref([])
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
