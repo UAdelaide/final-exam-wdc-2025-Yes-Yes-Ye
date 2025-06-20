@@ -54,7 +54,7 @@ router.post('/login', async (req, res) => {
     req.session.user = {
       user_id: rows[0].user_id,
       username: rows[0].username,
-      
+      role: rows[0].role
     };
 
     // The original code responds with a nested json for user: rows[0].
