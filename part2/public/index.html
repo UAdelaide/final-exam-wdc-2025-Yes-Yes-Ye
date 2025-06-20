@@ -50,7 +50,8 @@
           xhttp.setRequestHeader("Content-type", "application/json");
           xhttp.send(JSON.stringify({username: this.username, password: this.password}));
 
-          // If the response text is role: 
+          // Once the response If the response text is role: owner, go to the owner-dashboard.
+          // Else
         }
       }
     }).mount('#app');
