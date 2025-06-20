@@ -132,10 +132,10 @@
             message.value = '';
           }
         }
-
+        // Adding async to the onMounted element, and adding a new fetch request to a new route that provides
         onMounted( async () => {
           loadWalks();
-
+        // the list of dog names for the user.
           const dogsRes = await fetch('/api/users/dognames');
           this.dog_name = await dogRes.json();
         });
