@@ -80,6 +80,7 @@ router.post('/logout', function(req,res){
   });
 });
 
-// Created a new 
+// Created a new route for /api/users/dognames
+// 
 
 module.exports = router;
