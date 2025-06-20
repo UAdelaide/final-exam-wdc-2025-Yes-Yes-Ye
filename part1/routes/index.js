@@ -46,7 +46,8 @@ router.get('/api/walkrequests/open', function(req,res,next){
 router.get('/api/walkers/summary', function(req,res,next){
   try {
     db.query(`
-      SELECT u.username AS walker_username, COUNT(wra.rating_id) AS total_ratings, AVG(wra.rating) AS average_rating, COUNT(wre.request_id) AS 
+      SELECT u.username AS walker_username, COUNT(wra.rating_id) AS total_ratings, AVG(wra.rating) AS average_rating, COUNT(wre.request_id) AS completed_walks
+      FROM 
       `
     );
   } catch(error){}
