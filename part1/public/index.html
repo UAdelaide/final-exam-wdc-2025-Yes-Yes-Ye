@@ -13,13 +13,14 @@
         <img src="https://images.dog.ceo/breeds/appenzeller/n02107908_396.jpg" alt="">
         <br>
 
-        The three buttons that do not have clear meaning to the user. The three buttons represent
+        <!-- The three buttons that do not have clear meaning to the user. The three buttons represent
         Get Dog, Get WalkRequests, and Get Walker.
-        Each triggers a function that is hardcoded with values that will push values to the VUE3 array in data.
+        Each triggers a function that is hardcoded with values that will push values to the VUE3 array in data. -->
         <button type="button" @click="getDogs">Get.D</button>
         <button type="button" @click="getWalkRequests">Get.WR</button>
         <button type="button" @click="getWalkers">Get.W</button>
 
+        
         <ul>
             <li v-for="dog in Dogs">
                 <em>{{ dog }}</em>
