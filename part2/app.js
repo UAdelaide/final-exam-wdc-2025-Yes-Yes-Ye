@@ -19,7 +19,10 @@ app.use('/api/users', userRoutes);
 app.use(session({
     // Generate session id
     secret: Math.random().toString(36).substring(2),
-    cookie: {maxAge: 60*60*10000}
+    // Make it so that the session cookie lasts for an hour
+    cookie: {
+        maxAge: 60*60*10000, http
+    }
 }));
 
 // Export the app instead of listening here
