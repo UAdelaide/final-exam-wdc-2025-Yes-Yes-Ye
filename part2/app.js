@@ -9,6 +9,19 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
+// Add session middleware
+app.use(session({
+    // Basic security measures
+    secret: Math.random().toString(36),
+    resave: false,
+    saveUninitialized: false,
+    // Make it so that the session cookie lasts for an hour
+    cookie: {
+        seure: 'auto',
+        maxAge: 60*60*10000
+    }
+}));
+
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
