@@ -44,6 +44,7 @@ router.get('/api/walkrequests/open', function(req,res,next){
 });
 
 router.get('/api/walkers/summary', function(req,res,next){
+  
   try {
     db.query(`
       SELECT u.username AS walker_username, COUNT(wra.rating_id) AS total_ratings, AVG(wra.rating) AS average_rating, COUNT(wrq.request_id) AS completed_walks
@@ -52,10 +53,12 @@ router.get('/api/walkers/summary', function(req,res,next){
       LEFT JOIN WalkRatings wra ON wrq.request_id = wra.request_id
       GROUP BY u.user_id, u.username
       `, function(error, rows) {
-        
-      }
-    );
-  } catch(error){}
+        res.json(rows);
+      });
+  } catch(error){
+    // Sending a status error 404 and an errormessage
+    res.status(404).send('Database does not exist or cannot be recognised!');
+  }
 });
 
 module.exports = router;
