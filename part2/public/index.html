@@ -47,7 +47,7 @@
           console.log("function activated!");
           let xhttp = new XMLHttpRequest();
           xhttp.withCredentials = true;
-          xhttp.open('POST', '/api/login', true);
+          xhttp.open('POST', '/api/users/login', true);
           xhttp.setRequestHeader("Content-type", "application/json");
           xhttp.send(JSON.stringify({username: this.username, password: this.password}));
 
