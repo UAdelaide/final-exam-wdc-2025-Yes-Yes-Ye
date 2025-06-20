@@ -91,7 +91,7 @@ router.get('/dognames', async (req, res) => {
     JOIN Dogs d ON u.user_id = d.owner_id
     WHERE u.user_id = ?
     `, [req.session.user_id]);
-    console.log('Sent the dogs for ',req.session.username, '! The dog(s) are: ', );
+    console.log('Sent the dogs for ',req.session.username, '! The dog(s) are: ', rows[0]);
     res.json(rows);
 });
 
