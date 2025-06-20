@@ -65,6 +65,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
 router.post('/logout', function(req,res){
   console.log("Logout function activated!");
   req.session.destroy(function(err){
