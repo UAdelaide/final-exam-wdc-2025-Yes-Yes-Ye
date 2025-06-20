@@ -94,7 +94,7 @@
           // On button click, send a request to /api/users/logout, and send the user back to the login page.
           let xhttp = new XMLHttpRequest();
           xhttp.withCredentials = true;
-          xhttp.open('');
+          xhttp.open('POST', '/api/users/logout', true);
         }
       }
     }).mount('#app');
