@@ -82,5 +82,6 @@ router.post('/logout', function(req,res){
 
 // Created a new route for /api/users/dognames
 // Finds the dogs of the current user based on the session cookie.
+router.get('/dognames', function())
 
 module.exports = router;
