@@ -29,7 +29,7 @@ router.get('/api/walkrequests/open', function(req,res,next){
     db.query(`
       SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location, u.username AS owner_username
       FROM WalkRequests wr
-      JOIN Users u ON
+      JOIN Dogs d ON 
       `
     );
   } catch(error){}
