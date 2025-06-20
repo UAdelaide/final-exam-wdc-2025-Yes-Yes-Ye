@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/api/dogs', function(req,res,next){
+  // The try and catch block for handling potential errors as required
   try {
     // SQL Query with specified element names
     db.query(`
