@@ -133,8 +133,8 @@
           loadWalks();
 
           const dogsRes = await fetch('/api/users/dognames');
+          console.log("Response for /api/users/dognames recieved: ", dogsRes);
           dog_name.value = await dogsRes.json();
-          console.log("Response for /api/users/dognames recieved: ", dog_name);
         });
 
         return {
