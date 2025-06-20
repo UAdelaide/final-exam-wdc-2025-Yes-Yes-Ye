@@ -25,7 +25,7 @@ router.get('/api/dogs', function(req,res,next){
 });
 
 router.get('/api/walkrequests/open', function(req,res,next){
-
+  try{} catch(error)
 });
 
 router.get('/api/walkers/summary', function(req,res,next){
