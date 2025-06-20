@@ -12,7 +12,9 @@ router.get('/api/dogs', function(req,res,next){
     db.query('SELECT name, size FROM Dogs', function(error, rows) {
       res.json(rows);
     });
-  } catch(error){}
+  } catch(error){
+    
+  }
 });
 
 router.get('/api/walkrequests/open', function(req,res,next){
