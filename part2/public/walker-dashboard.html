@@ -95,6 +95,8 @@
           let xhttp = new XMLHttpRequest();
           xhttp.withCredentials = true;
           xhttp.open('POST', '/api/users/logout', true);
+          xhttp.send();
+          
         }
       }
     }).mount('#app');
