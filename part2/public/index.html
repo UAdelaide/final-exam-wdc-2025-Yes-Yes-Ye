@@ -45,6 +45,7 @@
           dogs: []
         };
       },
+      // Added a mounted function to load the dog list on page load Q17
       async mounted() {
         const dogList = await fetch('/api/items');
         this.dogs = await dogList.json();
