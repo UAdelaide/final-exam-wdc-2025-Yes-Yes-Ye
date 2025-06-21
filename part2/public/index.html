@@ -77,7 +77,7 @@
           return this.dogs.map(function(dog_combined, index){
             console.log("Current image is: ",this.dog_images[index].message);
             if (dogs.length != dog_images.length) {
-              return();
+              return "Fetching resources...";
             }
             return {
               dog_id: dog_combined.dog_id,
