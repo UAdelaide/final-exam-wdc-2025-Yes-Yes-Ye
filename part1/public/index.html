@@ -11,7 +11,7 @@
     <div id="app">
         <!-- Displaying the dog of the day -->
         <h1>Dog Of The Day!</h1>
-        <img :src="DogImage.message" src="/" alt="">
+        <img :src="DogImage" src="/" alt="">
         <!-- The three buttons that do not have clear meaning to the user. The three buttons represent
         Get Dog, Get WalkRequests, and Get Walker.
         Each triggers a function that is hardcoded with values that will push values to the VUE3 array in data. -->
@@ -48,7 +48,7 @@
                     Dogs: [],
                     WalkRequests: [],
                     Walkers: [],
-                    DogImage: []
+                    DogImage: ''
                 };
             },
             // A mounted function to fetch the image of a dog on page load
@@ -62,7 +62,7 @@
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         const retrievedImage = JSON.parse(this.responseText);
-                        vm.DogImage.push(retrievedImage);
+                        vm.DogImage.push(retrievedImage.message);
                         console.log(retrievedImage);
                     }
                 }
