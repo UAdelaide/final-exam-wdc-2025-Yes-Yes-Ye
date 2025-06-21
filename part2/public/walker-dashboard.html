@@ -89,6 +89,8 @@
             message.value = result.message;
             error.value = '';
             await loadWalkRequests();
+            // Added await 
+            await getCurrentUser();
           } catch (err) {
             error.value = err.message;
             message.value = '';
