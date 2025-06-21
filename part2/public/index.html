@@ -74,7 +74,6 @@
       // Added a computed function to combine the arrays dogs and dog_images to use both in the for loop.
       computed: {
         dogs_and_dog_images() {
-          
           return this.dogs.map(function(dog_combined, index){
             console.log("Current image is: ",this.dog_images[index].message);
             return {
@@ -122,16 +121,16 @@
             }
           }
         },
-        async getDogImages() {
+        getDogImages() {
           // Fetching the images of the dogs that will be displayed, relative to the
           // amount of registered dogs
           console.log("fetching the images of dogs!")
-          for (let i=0; i<this.dogs.length; i++){
-            const dogImages = await fetch('https://dog.ceo/api/breeds/image/random');
-            const currentDogImage = await dogImages.json();
-            this.dog_images.push(currentDogImage);
-          }
-          console.log(this.dog_images);
+        for (let i=0; i<this.dogs.length; i++){
+          const dogImages = await fetch('https://dog.ceo/api/breeds/image/random');
+          const currentDogImage = await dogImages.json();
+          this.dog_images.push(currentDogImage);
+        }
+        console.log(this.dog_images)
         }
       }
     }).mount('#app');
