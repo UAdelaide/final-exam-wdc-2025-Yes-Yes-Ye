@@ -70,7 +70,9 @@
         dogs_and_dog_images() {
           return this.dogs.map(function(dog_combined){
             return {
-              dog_id: dog
+              dog_id: dog_combined.dog_id,
+              dog_name: dog_combined.dog_name,
+              
             }
           }, this);
         }
