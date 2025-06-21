@@ -30,24 +30,24 @@
     <!-- creating a list with v-for -->
     <br>
     <label for="dogList">All Registered Dogs</label> <br>
-      <table id="dogList">
-        <thead>
-          <tr>
-            <th>Dog ID</th>
-            <th>Name</th>
-            <th>Size</th>
-            <th>OwnerID</th>
-            <th>Photo</th>
-          </tr>
-        </thead>
-      </table>
-      <tbody v-for="dog in dogs_and_dog_images" :key="dog.dog_id">
-        <td>{{ dog.dog_id }}</td>
-        <td>{{ dog.dog_name }}</td>
-        <td>{{ dog.size }}</td>
-        <td>{{ dog.owner_username }}</td>
-        <td><img src="dog.image" alt="sorry, couldn't load"></td>
-      </tbody>
+    <table id="dogList">
+      <thead>
+        <tr>
+          <th>Dog ID</th>
+          <th>Name</th>
+          <th>Size</th>
+          <th>OwnerID</th>
+          <th>Photo</th>
+        </tr>
+      </thead>
+    </table>
+    <tbody v-for="dog in dogs_and_dog_images" :key="dog.dog_id">
+      <td>{{ dog.dog_id }}</td>
+      <td>{{ dog.dog_name }}</td>
+      <td>{{ dog.size }}</td>
+      <td>{{ dog.owner_username }}</td>
+      <td><img src="dog.image" alt="sorry, couldn't load"></td>
+    </tbody>
 
     <!-- Removed the links, as they are not needed anymore
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
