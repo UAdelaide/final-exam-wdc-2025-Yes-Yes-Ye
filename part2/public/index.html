@@ -73,7 +73,8 @@
         this.dogs = await dogList.json();
         console.log(this.dogs);
 
-        // Fetching the images of the dogs that will be displayed
+        // Fetching the images of the dogs that will be displayed, relative to the
+        // amount of registered dogs
         for (let i=0; i<this.dogs.length; i++){
           const dogImages = await fetch('https://dog.ceo/api/breeds/image/random');
           const currentDogImage = await dogImages.json();
