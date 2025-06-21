@@ -74,11 +74,12 @@
       // Added a computed function to combine the arrays dogs and dog_images to use both in the for loop. Q17
       computed: {
         dogs_and_dog_images() {
-          return this.dogs.map(function(dog_combined, index){
-            console.log("Current image is: ",this.dog_images[index].message);
-            if (this.dogs.length != this.dog_images.length) {
+          if (this.dogs.length != this.dog_images.length) {
               return "Fetching resources...";
             }
+
+          return this.dogs.map(function(dog_combined, index){
+            console.log("Current image is: ",this.dog_images[index].message);
             return {
               dog_id: dog_combined.dog_id,
               dog_name: dog_combined.dog_name,
