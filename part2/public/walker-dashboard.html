@@ -68,8 +68,8 @@
           try {
             const res = await fetch ('/api/users/me');
             if (!res.ok) throw new Error('Failed to retrieve user information from session');
-            walks.value = await res.json();
-            console.log("walks.value set to: ", walks.value);
+            user.value = await res.json();
+            console.log("walks.value set to: ", user.value);
           } catch (err) {
             error.value = err.message
           }
