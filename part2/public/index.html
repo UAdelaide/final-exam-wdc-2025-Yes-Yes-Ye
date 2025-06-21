@@ -32,11 +32,7 @@
     <label for="dogList">All Registered Dogs</label> <br>
     <ul id="dogList">
       <table>
-        <td>Dog ID</td>
-        <td>Name</td>
-        <td>Size</td>
-        <td>OwnerID</td>
-        <td>Photo</td>
+        <thead></thead>
       </table>
       <li v-for="dog in dogs_and_dog_images" :key="dog.dog_id">
         <td>{{ dog.dog_id }}</td>
