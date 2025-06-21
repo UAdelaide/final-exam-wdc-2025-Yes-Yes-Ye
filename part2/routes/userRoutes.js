@@ -108,7 +108,7 @@ router.get('/doglist', async (req,res,next) => {
       SELECT d.dog_id, d.name AS dog_name, d.size, u.username AS owner_username
       FROM Dogs d
       JOIN Users u ON d.owner_id = u.user_id
-      ` {
+      `, function(error, rows) {
       res.json(rows);
     });
   } catch(error){
