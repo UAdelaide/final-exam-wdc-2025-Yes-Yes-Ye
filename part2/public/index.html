@@ -47,7 +47,7 @@
       },
       async mounted() {
         const dogList = await fetch('/api/items');
-        this.dogs
+        this.dogs = await dogList.json();
       },
       // Created a function for logging in
       methods: {
