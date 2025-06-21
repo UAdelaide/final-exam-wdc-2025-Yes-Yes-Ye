@@ -53,6 +53,8 @@
             },
             // A mounted function to fetch the image of a dog on page load
             mounted() {
+                const vm = this;
+
                 let xhttp = new XMLHttpRequest();
                 xhttp.open('GET', 'https://dog.ceo/api/breeds/image/random', true);
                 xhttp.send();
