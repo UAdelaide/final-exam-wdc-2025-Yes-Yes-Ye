@@ -75,7 +75,7 @@
       computed: {
         dogs_and_dog_images() {
           return this.dogs.map(function(dog_combined){
-            console.log(this.dog_images.message);
+            console.log("Current image is: ",this.dog_images.message);
             return {
               dog_id: dog_combined.dog_id,
               dog_name: dog_combined.dog_name,
