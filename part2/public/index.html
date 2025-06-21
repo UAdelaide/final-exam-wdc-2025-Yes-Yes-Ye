@@ -47,7 +47,7 @@
       },
       // Added a mounted function to load the dog list on page load Q17
       async mounted() {
-        const dogList = await fetch('/api/users/');
+        const dogList = await fetch('/api/users/doglist');
         this.dogs = await dogList.json();
       },
       // Created a function for logging in
