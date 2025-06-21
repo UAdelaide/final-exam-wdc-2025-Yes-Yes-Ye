@@ -98,8 +98,8 @@ router.get('/dognames', async (req, res) => {
     res.json(rows);
 });
 
-// Created a new route that is a copy of /api/dogs in part1
-router.get('/api/dogs', function(req,res,next){
+// Created a new route that is a copy of /api/dogs in part1, changed route to /doglist
+router.get('/doglist', function(req,res,next){
   // The try and catch block for handling potential errors as required
   try {
     // SQL Query with specified element names
