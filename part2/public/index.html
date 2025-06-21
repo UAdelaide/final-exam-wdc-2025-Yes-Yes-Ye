@@ -46,7 +46,8 @@
         };
       },
       async mounted() {
-        const dogList
+        const dogList = await fetch('/api/items');
+        this.dogs
       },
       // Created a function for logging in
       methods: {
