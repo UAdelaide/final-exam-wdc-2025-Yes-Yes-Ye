@@ -40,14 +40,15 @@
           <th>Photo</th>
         </tr>
       </thead>
-    </table>
-    <tbody v-for="dog in dogs_and_dog_images" :key="dog.dog_id">
+      <tbody v-for="dog in dogs_and_dog_images" :key="dog.dog_id">
       <td>{{ dog.dog_id }}</td>
       <td>{{ dog.dog_name }}</td>
       <td>{{ dog.size }}</td>
       <td>{{ dog.owner_username }}</td>
       <td><img src="dog.image" alt="sorry, couldn't load"></td>
-    </tbody>
+      </tbody>
+    </table>
+
 
     <!-- Removed the links, as they are not needed anymore
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
