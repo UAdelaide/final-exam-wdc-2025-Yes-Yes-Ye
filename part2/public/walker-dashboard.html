@@ -78,7 +78,9 @@
         async function applyToWalk(requestId) {
           try {
             // adding an if statement to stop this function from working until the getCurrentUser() finishes
-            if 
+            if (getCurrentUserState){
+              console.log(getC);
+            }
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
