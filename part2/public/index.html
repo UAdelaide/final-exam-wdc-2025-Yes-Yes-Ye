@@ -60,14 +60,17 @@
           username: '',
           password: '',
           message: 'Welcome to the Dog Walking Service!',
-          // Added the dogs array and dogfor the table Q17
-          dogs: []
+          // Added the dogs array and dog_images array for the table Q17
+          dogs: [],
+          dog_images: []
         };
       },
       // Added a mounted function to load the dog list on page load Q17
       async mounted() {
         const dogList = await fetch('/api/users/doglist');
         this.dogs = await dogList.json();
+
+        
       },
       // Created a function for logging in
       methods: {
