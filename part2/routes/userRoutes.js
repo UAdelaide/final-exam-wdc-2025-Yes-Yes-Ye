@@ -104,11 +104,11 @@ router.get('/doglist', async (req,res,next) => {
   // The try and catch block for handling potential errors as required
   try {
     // SQL Query with specified element names
-    db.query(`
+    const[rows] = await db.query(`
       SELECT d.dog_id, d.name AS dog_name, d.size, u.username AS owner_username
       FROM Dogs d
       JOIN Users u ON d.owner_id = u.user_id
-      `, function(error, rows) {
+      ` {
       res.json(rows);
     });
   } catch(error){
