@@ -99,5 +99,21 @@ router.get('/dognames', async (req, res) => {
 });
 
 // Created a new route that is a copy of /api/dogs in part1
+router.get('/api/dogs', function(req,res,next){
+  // The try and catch block for handling potential errors as required
+  try {
+    // SQL Query with specified element names
+    db.query(`
+      SELECT d.name AS dog_name, d.size, u.username AS owner_username
+      FROM Dogs d
+      JOIN Users u ON d.owner_id = u.user_id
+      `, function(error, rows) {
+      res.json(rows);
+    });
+  } catch(error){
+    // Sending a status error 404 and an errormessage
+    res.status(404).send('Database does not exist or cannot be recognised!');
+  }
+});
 
 module.exports = router;
