@@ -30,8 +30,7 @@
     <!-- creating a list with v-for -->
     <br>
     <label for="dogList">All Registered Dogs</label> <br>
-    <ul id="dogList">
-      <table>
+      <table id="dogList">
         <thead>
           <tr>
             <th>Dog ID</th>
@@ -48,8 +47,7 @@
         <td>{{ dog.size }}</td>
         <td>{{ dog.owner_username }}</td>
         <td><img src="dog.image" alt="sorry, couldn't load"></td>
-      </li>
-    </ul>
+      </tbody>
 
     <!-- Removed the links, as they are not needed anymore
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
