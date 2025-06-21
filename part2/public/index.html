@@ -69,9 +69,6 @@
       async mounted() {
         const dogList = await fetch('/api/users/doglist');
         this.dogs = await dogList.json();
-
-        const dogImages = await fetch("https://dog.ceo/api/breeds/image/random")
-        this.dog_images = awai
       },
       // Created a function for logging in
       methods: {
