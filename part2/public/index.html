@@ -74,7 +74,8 @@
 
         for (let i=0; i<this.dogs.length; i++){
           const dogImages = await fetch('https://dog.ceo/api/breeds/image/random');
-          this.dog_images.push() = await dogImages.json();
+          const currentDogImage = await dogImages.json();
+          this.dog_images.push();
         }
         console.log(this.dog_images)
       },
