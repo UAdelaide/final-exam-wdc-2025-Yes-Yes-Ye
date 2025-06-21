@@ -72,7 +72,7 @@
         this.dogs = await dogList.json();
         console.log(this.dogs);
 
-        for (let i=0; i<dogs.length; i++){
+        for (let i=0; i<this.dogs.length; i++){
           const dogImages = await fetch('https://dog.ceo/api/breeds/image/random');
           this.dog_images = await dogImages.json();
         }
