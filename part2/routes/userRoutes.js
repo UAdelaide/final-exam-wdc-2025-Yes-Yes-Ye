@@ -98,6 +98,6 @@ router.get('/dognames', async (req, res) => {
     res.json(rows);
 });
 
-// Created a new route that is a copy of 
+// Created a new route that is a copy of /api/dogs in part1
 
 module.exports = router;
