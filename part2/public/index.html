@@ -121,7 +121,7 @@
             }
           }
         },
-        getDogImages() {
+        async getDogImages() {
           // Fetching the images of the dogs that will be displayed, relative to the
           // amount of registered dogs
           console.log("fetching the images of dogs!")
@@ -130,7 +130,7 @@
             const currentDogImage = await dogImages.json();
             this.dog_images.push(currentDogImage);
           }
-          console.log(this.dog_images)
+          console.log(this.dog_images);
         }
       }
     }).mount('#app');
