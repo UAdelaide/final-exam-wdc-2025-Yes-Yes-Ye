@@ -61,6 +61,7 @@
                     if (this.readyState == 4 && this.status == 200) {
                         const retrievedImage = JSON.parse(this.responseText);
                         this.DogImage.push(retrievedImage);
+                        console.log(retrievedImage);
                     }
                 }
             },
