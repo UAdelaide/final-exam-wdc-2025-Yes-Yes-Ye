@@ -65,8 +65,10 @@
           dog_images: []
         };
       },
-      // Added a computed function to combine the arrays dogs and dog_images to allow use in the for loop.
-      computed: {},
+      // Added a computed function to combine the arrays dogs and dog_images to use both in the for loop.
+      computed: {
+        dogs
+      },
       // Added a mounted function to load the dog list on page load Q17
       async mounted() {
         // Fetching the information for dogs
