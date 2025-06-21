@@ -62,7 +62,7 @@
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         const retrievedImage = JSON.parse(this.responseText);
-                        vm.DogImage.push(retrievedImage.message);
+                        vm.DogImage = retrievedImage.message;
                         console.log(retrievedImage.message);
                     }
                 }
