@@ -98,13 +98,13 @@
         // Added the function to on Mounted
         onMounted(() => {
           loadWalkRequests();
+          getCurrentUser();
         });
 
         return {
           walks,
           message,
           error,
-          getCurrentUser,
           applyToWalk
         };
       },
