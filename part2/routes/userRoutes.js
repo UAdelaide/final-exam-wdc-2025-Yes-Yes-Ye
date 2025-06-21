@@ -99,7 +99,7 @@ router.get('/dognames', async (req, res) => {
 });
 
 // Created a new route that is a copy of /api/dogs in part1, changed route to /doglist,
-// and added the dogID to the query
+// and added the dogID to the query. Also changed the function to 
 router.get('/doglist', function(req,res,next){
   // The try and catch block for handling potential errors as required
   try {
