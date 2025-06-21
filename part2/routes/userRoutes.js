@@ -109,6 +109,7 @@ router.get('/doglist', async (req,res,next) => {
       FROM Dogs d
       JOIN Users u ON d.owner_id = u.user_id
       `);
+      res.send(rows);
   } catch(error){
     // Sending a status error 404 and an errormessage
     res.status(404).send('Database does not exist or cannot be recognised!');
