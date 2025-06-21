@@ -105,7 +105,7 @@ router.get('/doglist', function(req,res,next){
   try {
     // SQL Query with specified element names
     db.query(`
-      SELECT d.name AS dog_name, d.size, u.username AS owner_username
+      SELECT d.dog_id, d.name AS dog_name, d.size, u.username AS owner_username
       FROM Dogs d
       JOIN Users u ON d.owner_id = u.user_id
       `, function(error, rows) {
