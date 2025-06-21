@@ -75,13 +75,13 @@
       computed: {
         dogs_and_dog_images() {
           return this.dogs.map(function(dog_combined, index){
-            console.log("Current image is: ",this.dog_images.message);
+            console.log("Current image is: ",this.dog_images[index].message);
             return {
               dog_id: dog_combined.dog_id,
               dog_name: dog_combined.dog_name,
               size: dog_combined.size,
               owner_username: dog_combined.owner_username,
-              image: this.dog_images[index].message
+              image: this.dog_images.message
             }
           }, this);
         }
