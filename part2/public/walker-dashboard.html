@@ -89,7 +89,8 @@
             message.value = result.message;
             error.value = '';
             await loadWalkRequests();
-            // Added this at the end of the if statement for an error
+            // Added this at the end of the if statement for an error, which will prevent the
+            // function from running before getCurrentUser Finishes.
             await getCurrentUser();
           } catch (err) {
             error.value = err.message;
